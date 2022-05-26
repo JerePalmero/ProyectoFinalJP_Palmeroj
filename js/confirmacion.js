@@ -1,4 +1,27 @@
+
 actualizarBotonCarrito();
+function mostrarFormEnviado2() {
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'Gracias!',
+        text: 'Su compra se Realizo correctamente!',
+        showConfirmButton: false,
+        
+        width: 600,
+        padding: '3em',
+        color: '#716add',
+        
+        timer: 3000,
+
+        
+
+
+      });
+    
+      eliminarCarrito()
+      actualizarBotonCarrito();   
+}
 
 const carrito = JSON.parse(localStorage.getItem("carrito"));
 const datos_formulario = JSON.parse(localStorage.getItem("datos_formulario"));
@@ -29,6 +52,11 @@ contenido += `<div class='col-md-6 bg-light p-3'>
 </ul>
 </div>
 <div class='col-md-12 text-center p-5'>
-<button class='btn btn-warning'>Finalizar Compra</button>
+<button id="boton_envia" class='btn btn-warning'>Finalizar Compra</button>
+
+
 </div>`;
+
 resumen_compra.innerHTML = contenido;
+
+document.getElementById("boton_envia").addEventListener("click", mostrarFormEnviado2);
