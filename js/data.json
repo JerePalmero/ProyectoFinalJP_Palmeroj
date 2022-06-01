@@ -1,0 +1,7 @@
+[
+    {"nombre": "Papa", "precio": 100, "id": 1},
+    {"nombre": "Cebolla", "precio": 60, "id": 2},
+    {"nombre": "Tomate", "precio": 80, "id": 3},
+    {"nombre": "Frutilla", "precio": 200, "id": 4},
+    {"nombre": "Calabaza", "precio": 120, "id": 5}
+]
