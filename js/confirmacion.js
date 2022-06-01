@@ -1,32 +1,37 @@
 
+
 actualizarBotonCarrito();
+
+function redireccionarindex() {
+    document.location = "index.html"
+    eliminarCarrito()
+}
+
 function mostrarFormEnviado2() {
     Swal.fire({
         position: 'top',
         icon: 'success',
         title: 'Gracias!',
         text: 'Su compra se Realizo correctamente!',
-        showConfirmButton: false,
+        showConfirmButton: true,
         
         width: 600,
         padding: '3em',
         color: '#716add',
-        
-        timer: 3000,
-
-        
-
-
-      });
-    
-      eliminarCarrito()
-      actualizarBotonCarrito();   
+      }).then((result) => {
+        if (result.isConfirmed) {
+          redireccionarindex();
+          
+        }
+    });
+      
 }
 
 const carrito = JSON.parse(localStorage.getItem("carrito"));
 const datos_formulario = JSON.parse(localStorage.getItem("datos_formulario"));
 const resumen_compra = document.getElementById("resumen_compra");
 let total_pagar = 0;
+
 
 let contenido = `<div class='col-md-6 bg-light p-3'>
 <h3>Productos</h3>
