@@ -12,7 +12,8 @@ function mostrarFormEnviado2() {
         position: 'top',
         icon: 'success',
         title: 'Gracias!',
-        text: 'Su compra se Realizo correctamente!',
+        text: 'Su compra se Realizo correctamente. Nos comunicaremos contigo para realizar la entrega!',
+       
         showConfirmButton: true,
         
         width: 600,
